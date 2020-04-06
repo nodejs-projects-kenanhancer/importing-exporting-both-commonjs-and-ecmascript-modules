@@ -6,7 +6,21 @@
 
 
 //we can import CommonJS modules.
+//if we are importing like the following, then it will be mutable
 import greetingService from './CJS/greeting-service.js';
+
+//if we are importing under a namespace(like greetingServiceV2), it will be readonly.
+import * as greetingServiceV2 from './CJS/greeting-service.js';
+
+import { default as greetingServiceV3 } from './CJS/greeting-service.js';
+
+//CommonJS modules can't be imported like the following, 
+//because CommonJS modules can be exported only default export.
+//import { sayHello } from './CJS/greeting-service.js';
+
+
+
+
 
 import { Person } from './ESM/person.mjs';
 
