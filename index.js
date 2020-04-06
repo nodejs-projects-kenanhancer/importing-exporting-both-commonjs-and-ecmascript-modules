@@ -1,10 +1,14 @@
+//we can require CommonJS modules but can't import them.
+const greetingService = require('./CJS/greeting-service.js');
+
 async function main() {
 
-    const { Person } = await import('./person.mjs');
+    //we can import ES modules. We need to use import() method with await.
+    const { Person } = await import('./ESM/person.mjs');
 
-    const { default: GreetingHelper } = await import('./greeting-helper.mjs');
+    const { default: GreetingHelper } = await import('./ESM/greeting-helper.mjs');
 
-    const { default: Greeting } = await import('./greeting.mjs');
+    const { default: Greeting } = await import('./ESM/greeting.mjs');
 
     const person = new Person({ firstName: "kenan", lastName: "hancer" });
 
@@ -23,7 +27,7 @@ async function main() {
 
 
 
-    const { sayHello, sayBye } = await import('./say.mjs');
+    const { sayHello, sayBye } = await import('./ESM/say.mjs');
 
     console.log(sayHello('Kenan'));
 
@@ -36,14 +40,14 @@ async function main() {
         MODULES_BECAME_STANDARD_YEAR,
         User,
         sayHi
-    } = await import('./module-export.mjs');
+    } = await import('./ESM/module-export.mjs');
 
 
 
 
 
 
-    const { default: Square } = await import('./Square.mjs');
+    const { default: Square } = await import('./ESM/Square.mjs');
 
     const square = new Square({ length: 40 });
 
@@ -54,7 +58,7 @@ async function main() {
 
 
 
-    const { Rectangle } = await import('./rectangle.mjs');
+    const { Rectangle } = await import('./ESM/rectangle.mjs');
 
     const rectangle = new Rectangle({ width: 30, heigth: 50 });
 
