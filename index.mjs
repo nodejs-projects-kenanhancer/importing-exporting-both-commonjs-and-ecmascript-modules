@@ -14,6 +14,27 @@ import GreetingHelper from './ESM/greeting-helper.mjs';
 
 import Greeting from './ESM/greeting.mjs';
 
+import * as moduleExportV2Namespace from './ESM/module-export-v2.mjs';
+
+//namespace usage
+import * as moduleExportNamespace from './ESM/module-export.mjs';
+
+//Named export and default export are used together
+import moduleExportDefaultValue, { firstName, sayHi } from './ESM/module-export.mjs';
+
+//Named export
+import { square, diag } from './ESM/lib.mjs';
+
+//Namespace usage
+import * as lib from './ESM/lib.mjs';
+
+//Named export and default export are used together
+import _, { each } from './ESM/underscore.mjs';
+
+import cube, { foo, graph } from './ESM/my-module.mjs';
+
+
+
 
 const person = new Person({ firstName: "kenan", lastName: "hancer" });
 

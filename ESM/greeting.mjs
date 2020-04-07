@@ -16,4 +16,5 @@ class Greeting {
     }
 }
 
+//default export
 export default Greeting;
