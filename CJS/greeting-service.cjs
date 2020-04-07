@@ -1,4 +1,4 @@
-const greetingHelper = require('./greeting-helper');
+const greetingHelper = require('./greeting-helper.cjs');
 
 module.exports = {
     sayHello: ({ firstName, lastName }) => {

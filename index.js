@@ -6,21 +6,21 @@
 
 
 //we can import CommonJS modules.
-import greetingService from './CJS/greeting-service.js';
+import greetingService from './CJS/greeting-service.cjs';
 
-import { Person } from './ESM/person.mjs';
+import { Person } from './ESM/person.js';
 
-import GreetingHelper from './ESM/greeting-helper.mjs';
+import GreetingHelper from './ESM/greeting-helper.js';
 
 import Greeting from './ESM/greeting.mjs';
 
 import * as moduleExportV2Namespace from './ESM/module-export-v2.mjs';
 
 //namespace usage
-import * as moduleExportNamespace from './ESM/module-export.mjs';
+import * as moduleExportNamespace from './ESM/module-export.js';
 
 //Named export and default export are used together
-import moduleExportDefaultValue, { firstName, sayHi } from './ESM/module-export.mjs';
+import moduleExportDefaultValue, { firstName, sayHi } from './ESM/module-export.js';
 
 //Named export
 import { square, diag } from './ESM/lib.mjs';
@@ -31,7 +31,7 @@ import * as lib from './ESM/lib.mjs';
 //Named export and default export are used together
 import _, { each } from './ESM/underscore.mjs';
 
-import cube, { foo, graph } from './ESM/my-module.mjs';
+import cube, { foo, graph } from './ESM/my-module.js';
 
 
 
@@ -71,7 +71,7 @@ async function main() {
 
     //we can import ES modules. We need to use import() method with await.
 
-    const { default: Square } = await import('./ESM/Square.mjs');
+    const { default: Square } = await import('./ESM/Square.js');
 
     const square = new Square({ length: 40 });
 
