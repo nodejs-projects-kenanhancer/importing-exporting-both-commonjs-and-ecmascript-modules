@@ -18,6 +18,14 @@ import RectangleCJS from './CJS/rectangle.cjs';
 
 console.log(new RectangleCJS({ width: 30, height: 50 }));
 
+// `package.json` has type field which is setted to `module`
+// it means that all `.js` extension files will be ES6 module
+// So the following code will not run because `circle.js`
+// exported classes in old way.
+// import Circle from './CJS/circle.js';
+
+// console.log(new Circle({ radius: 3 }));
+
 import { Person } from './ESM/person.js';
 
 import GreetingHelper from './ESM/greeting-helper.js';
