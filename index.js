@@ -8,6 +8,16 @@
 //we can import CommonJS modules.
 import greetingService from './CJS/greeting-service.cjs';
 
+console.log(greetingService.sayHello({ firstName: "kenan", lastName: "hancer" }));
+
+import Student from './CJS/student.cjs';
+
+console.log(new Student({ firstName: "kenan", lastName: "hancer" }));
+
+import RectangleCJS from './CJS/rectangle.cjs';
+
+console.log(new RectangleCJS({ width: 30, height: 50 }));
+
 import { Person } from './ESM/person.js';
 
 import GreetingHelper from './ESM/greeting-helper.js';
@@ -38,6 +48,8 @@ import cube, { foo, graph } from './ESM/my-module.js';
 
 const person = new Person({ firstName: "kenan", lastName: "hancer" });
 
+// const student = new Student({ firstName: "kenan", lastName: "hancer" });
+
 const greeting = new Greeting({ greetingHelper: new GreetingHelper() });
 
 const helloMessage = greeting.sayHello(person);
@@ -60,7 +72,7 @@ console.log(sayBye('Kenan'));
 
 import { Rectangle } from './ESM/rectangle.mjs';
 
-const rectangle = new Rectangle({ width: 30, heigth: 50 });
+const rectangle = new Rectangle({ width: 30, height: 50 });
 
 console.log(`${rectangle.getName()}`);
 

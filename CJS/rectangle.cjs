@@ -1,9 +1,11 @@
-import Polygon from './polygon.mjs';
+const Shape = require('./shape.cjs');
 
-export class Rectangle extends Polygon {
+class Rectangle extends Shape {
     constructor({ width, height }) {
         super({ width, height });
 
+        this.width = width;
+        this.height = height;
         this.name = 'Rectangle';
     }
 
@@ -11,3 +13,5 @@ export class Rectangle extends Polygon {
         return super.getName();
     }
 }
+
+module.exports = Rectangle;

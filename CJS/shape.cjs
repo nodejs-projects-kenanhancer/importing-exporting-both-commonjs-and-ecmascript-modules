@@ -1,6 +1,6 @@
-class Polygon {
+class Shape {
     constructor({ width, height }) {
-        this.name = 'Polygon';
+        this.name = 'Shape';
         this.height = height;
         this.width = width;
     }
@@ -11,4 +11,4 @@ class Polygon {
 
 }
 
-export default Polygon;
+module.exports = Shape;

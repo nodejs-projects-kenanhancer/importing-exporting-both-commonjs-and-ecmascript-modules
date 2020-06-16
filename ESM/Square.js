@@ -2,13 +2,13 @@ import Polygon from './polygon.mjs';
 
 class Square extends Polygon {
     constructor({ length }) {
-        super({ width: length, heigth: length });
+        super({ width: length, height: length });
 
         this.name = 'Square';
     }
 
     get Area() {
-        return this.heigth * this.width;
+        return this.height * this.width;
     }
 
     set Area(value) {
